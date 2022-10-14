@@ -26,8 +26,7 @@ export const RandomStandupComedy = () => {
                 <h2 className='heading'>✨ Random Standup Comedy Player ✨</h2>
                 <div className="player-wrapper">
                     <ReactPlayer
-                        playsInline
-                        playsinline
+                    playsInline={true}
                         className='react-player'
                         playing={true}
                         controls={true}
@@ -42,8 +41,8 @@ export const RandomStandupComedy = () => {
 
             <div className='footer'>
                 <div className="madeBy">
-                    <h3>Made by </h3>
-                    <a href="https://github.com/SunmeetS" target="blank">&nbsp; Sunmeet Singh</a>
+                <h3>Made by </h3> 
+                <a href="https://github.com/SunmeetS" target="blank">&nbsp; Sunmeet Singh</a>
                 </div>
                 <div className="socials">
                     <a href="https://www.linkedin.com/in/sunmeetsinghhh" target="blank" className="linkedIn">&nbsp;  LinkedIn </a>
