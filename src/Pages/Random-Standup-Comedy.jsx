@@ -26,7 +26,7 @@ export const RandomStandupComedy = () => {
                 <h2 className='heading'>✨ Random Standup Comedy Player ✨</h2>
                 <div className="player-wrapper">
                     <ReactPlayer
-                    playsinline={true}
+                    playsInline={true}
                         className='react-player'
                         playing={true}
                         controls={true}
