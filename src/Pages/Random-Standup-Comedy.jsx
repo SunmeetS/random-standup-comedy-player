@@ -13,7 +13,6 @@ export const RandomStandupComedy = () => {
         try {
             axios.get('http://localhost:3001/getLatestLinks').then((res) => {
                 setLinks(res.data)
-                console.log(res.data)
             });
         } catch (err) {
             console.log(String(err))
