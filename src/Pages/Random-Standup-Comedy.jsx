@@ -31,18 +31,10 @@ export const RandomStandupComedy = () => {
                         playing={true}
                         controls={true}
                         volume={0.75}
-                        pip={true} url={links[id]?.url} />
-
-                    <ReactPlayer
-                        playsInline={true}
-                        className='react-player'
-                        playing={true}
-                        controls={true}
-                        volume={0.75}
-                        pip={true} url='https://www.youtube.com/watch?v=pyvNP5qg0tk&ab_channel=PTCPUNJABI' />
-
+                        pip={true} url={'"'+links[id]?.url+'"'} 
+                        />
                 </div>
-                <button className='button-85' onClick={() => { setId(Math.floor(Math.random() * 40)) }}>
+                <button className='button-85' onClick={() => { setId(Math.floor(Math.random() * 40)); console.log('"'+links[id]?.url+'"') }}>
                     Not this one ? <br /> Click for Next Video
                 </button>
             </div>
