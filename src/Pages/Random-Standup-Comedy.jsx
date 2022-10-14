@@ -28,7 +28,7 @@ export const RandomStandupComedy = () => {
                 <div className="player-wrapper">
                     <ReactPlayer
                         className='react-player'
-                        playing={false}
+                        playing={true}
                         controls={true}
                         volume={0.75}
                         pip={true} url={links[id]?.url} />
