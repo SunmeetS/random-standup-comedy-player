@@ -26,12 +26,20 @@ export const RandomStandupComedy = () => {
                 <h2 className='heading'>✨ Random Standup Comedy Player ✨</h2>
                 <div className="player-wrapper">
                     <ReactPlayer
-                    playsInline={true}
+                        playsInline={true}
                         className='react-player'
                         playing={true}
                         controls={true}
                         volume={0.75}
                         pip={true} url={links[id]?.url} />
+
+                    <ReactPlayer
+                        playsInline={true}
+                        className='react-player'
+                        playing={true}
+                        controls={true}
+                        volume={0.75}
+                        pip={true} url='https://www.youtube.com/watch?v=pyvNP5qg0tk&ab_channel=PTCPUNJABI' />
 
                 </div>
                 <button className='button-85' onClick={() => { setId(Math.floor(Math.random() * 40)) }}>
@@ -41,8 +49,8 @@ export const RandomStandupComedy = () => {
 
             <div className='footer'>
                 <div className="madeBy">
-                <h3>Made by </h3> 
-                <a href="https://github.com/SunmeetS" target="blank">&nbsp; Sunmeet Singh</a>
+                    <h3>Made by </h3>
+                    <a href="https://github.com/SunmeetS" target="blank">&nbsp; Sunmeet Singh</a>
                 </div>
                 <div className="socials">
                     <a href="https://www.linkedin.com/in/sunmeetsinghhh" target="blank" className="linkedIn">&nbsp;  LinkedIn </a>
