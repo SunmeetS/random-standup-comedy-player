@@ -9,7 +9,7 @@ const corsOption = {
 };
 
 cron.schedule("0 1 * * 1", function() {
-    axios.post("http://localhost:3001/addLinks")
+    axios.post("http://random-standup-comedy.netlify.app/addLinks")
 });
 
 let app = express();
