@@ -11,7 +11,7 @@ export const RandomStandupComedy = () => {
 
     useEffect(() => {
         try {
-            axios.get('http://express-server-production-dd8e.up.railway.app/getLatestLinks').then((res) => {
+            axios.get('https://express-server-production-dd8e.up.railway.app/getLatestLinks').then((res) => {
                 setLinks(res.data)
             });
         } catch (err) {
