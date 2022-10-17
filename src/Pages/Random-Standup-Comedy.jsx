@@ -34,7 +34,7 @@ export const RandomStandupComedy = () => {
                         pip={true} url={links[id]?.url} 
                         />
                 </div>
-                <button className='button-85' onClick={() => { setId(Math.floor(Math.random() * 40)); console.log((links[id]?.url) || (`url not available, data in link is:  ${links[id]}, ${id}`))}}>
+                <button className='button-85' onClick={() => { setId(Math.floor(Math.random() * 40)); console.log(links[id], id)}}>
                     Not this one ? <br /> Click for Next Video
                 </button>
 
@@ -44,7 +44,7 @@ export const RandomStandupComedy = () => {
             <div className='footer'>
                 <div className="madeBy">
                     <h3>Made by </h3>
-                    <a href="https://github.com/SunmeetS" target="blank">&nbsp; Sunmeet Singh</a>
+                    <a href="https://github.com/SunmeetS/random-standup-comedy-player" target="blank">&nbsp; Sunmeet Singh</a>
                 </div>
                 <div className="socials">
                     <a href="https://www.linkedin.com/in/sunmeetsinghhh" target="blank" className="linkedIn">&nbsp;  LinkedIn </a>
