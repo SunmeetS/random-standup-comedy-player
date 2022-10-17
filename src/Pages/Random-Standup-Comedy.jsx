@@ -11,7 +11,7 @@ export const RandomStandupComedy = () => {
 
     useEffect(() => {
         try {
-            axios.get('http://satao.db.elephantsql.com/getLatestLinks').then((res) => {
+            axios.get('http://express-server-production-dd8e.up.railway.app/getLatestLinks').then((res) => {
                 setLinks(res.data)
             });
         } catch (err) {
@@ -34,7 +34,7 @@ export const RandomStandupComedy = () => {
                         pip={true} url={links[id]?.url} 
                         />
                 </div>
-                <button className='button-85' onClick={() => { setId(Math.floor(Math.random() * 40)); console.log(links[id]?.url) }}>
+                <button className='button-85' onClick={() => { setId(Math.floor(Math.random() * 40)); console.log((links[id]?.url) || ("url not available, data in link is: ", links, id))}}>
                     Not this one ? <br /> Click for Next Video
                 </button>
 
