@@ -34,7 +34,7 @@ export const RandomStandupComedy = () => {
                         pip={true} url={links[id]?.url} 
                         />
                 </div>
-                <button className='button-85' onClick={() => { setId(Math.floor(Math.random() * 40)); console.log((links[id]?.url) || ("url not available, data in link is: ", links, id))}}>
+                <button className='button-85' onClick={() => { setId(Math.floor(Math.random() * 40)); console.log((links[id]?.url) || (`url not available, data in link is:  ${links[id]}, ${id}`))}}>
                     Not this one ? <br /> Click for Next Video
                 </button>
 
