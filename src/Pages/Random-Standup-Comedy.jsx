@@ -11,7 +11,7 @@ export const RandomStandupComedy = () => {
 
     useEffect(() => {
         try {
-            axios.get('http://localhost:3001/getLatestLinks').then((res) => {
+            axios.get('http://satao.db.elephantsql.com/getLatestLinks').then((res) => {
                 setLinks(res.data)
             });
         } catch (err) {
@@ -31,12 +31,14 @@ export const RandomStandupComedy = () => {
                         playing={true}
                         controls={true}
                         volume={0.75}
-                        pip={true} url={'"'+links[id]?.url+'"'} 
+                        pip={true} url={links[id]?.url} 
                         />
                 </div>
-                <button className='button-85' onClick={() => { setId(Math.floor(Math.random() * 40)); console.log('"'+links[id]?.url+'"') }}>
+                <button className='button-85' onClick={() => { setId(Math.floor(Math.random() * 40)); console.log(links[id]?.url) }}>
                     Not this one ? <br /> Click for Next Video
                 </button>
+
+                
             </div>
 
             <div className='footer'>
