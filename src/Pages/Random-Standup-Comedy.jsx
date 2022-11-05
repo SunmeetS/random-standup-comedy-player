@@ -5,9 +5,10 @@ import ReactPlayer from 'react-player'
 
 export const RandomStandupComedy = () => {
 
-    let [videoId, setVideoId] = useState("")
     let [links, setLinks] = useState([])
     let [id, setId] = useState(Math.floor(Math.random() * 40));
+    let [prev, setPrev] = useState([id])
+    let [prevIndex, setPrevIndex] = useState()
 
     useEffect(() => {
         try {
@@ -15,7 +16,7 @@ export const RandomStandupComedy = () => {
                 setLinks(res.data)
             });
         } catch (err) {
-            console.log(String(err))
+            console.log()
         }
     }, [])
 
@@ -31,20 +32,33 @@ export const RandomStandupComedy = () => {
                         playing={true}
                         controls={true}
                         volume={0.75}
-                        pip={true} url={links[id]?.url} 
-                        />
+                        pip={true} url={links[id]?.url}
+                    />
                 </div>
-                <button className='button-85' onClick={() => { setId(Math.floor(Math.random() * 40)); console.log(links[id], id)}}>
-                    Not this one ? <br /> Click for Next Video
-                </button>
+                <div className="buttons">
+                    <button className='button-85' onClick={() => {
+                        setId(prev[prevIndex])
+                        setPrevIndex(prevIndex - 1)
+                    }}>
+                        Prev Video
+                    </button>
+                    <button className='button-85' onClick={() => {
+                        setPrevIndex(prev.length);
+                        if(id)setPrev([...prev, id])
+                        setId(Math.floor(Math.random() * 40));
+                    }}>
+                        Next Video
+                    </button>
+                </div>
 
-                
+
+
             </div>
 
             <div className='footer'>
                 <div className="madeBy">
                     <h3>Made by </h3>
-                    <a href="https://github.com/SunmeetS/random-standup-comedy-player" target="blank">&nbsp; Sunmeet Singh</a>
+                    <a href="https://github.com/SunmeetS" target="blank">&nbsp; Sunmeet Singh</a>
                 </div>
                 <div className="socials">
                     <a href="https://www.linkedin.com/in/sunmeetsinghhh" target="blank" className="linkedIn">&nbsp;  LinkedIn </a>
