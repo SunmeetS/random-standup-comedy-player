@@ -5,7 +5,7 @@ import ReactPlayer from 'react-player'
 
 export const RandomStandupComedy = () => {
 
-    let [links, setLinks] = useState([[
+    let [links, setLinks] = useState([
         {
           date: '2022-11-23',
           url: 'https://www.youtube.com/watch?v=P6gyWnb_E0M'
@@ -166,7 +166,7 @@ export const RandomStandupComedy = () => {
           date: '2022-11-23',
           url: 'https://www.youtube.com/watch?v=zXqf4kDMT-A'
         }
-      ]])
+      ])
     let [id, setId] = useState(Math.floor(Math.random() * 40));
     let [prev, setPrev] = useState([id])
     let [prevIndex, setPrevIndex] = useState()
